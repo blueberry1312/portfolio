@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  src: url('../fonts/Cinzel-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BigShouldersDisplay';
+  font-style: normal;
+  src: url('../fonts/BigShouldersDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+  background: url("../images/background.png");
+  background-color: #3a5c6b;
+  font-family: 'Cinzel', sans-serif;
+  color: #86D5F7;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+.section {
+  height: 100vh;
+  padding: 50px;
+  scroll-snap-align: start;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 54px;
+  font-family: 'BigShouldersDisplay', sans-serif;
+  font-style: bold;
+  letter-spacing: 4px;
+  transition: color 0.3s;
+  margin-bottom: 25px;
+}
+
+.title:hover {
+  color: #ada0f7;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-family: 'BigShouldersDisplay', sans-serif;
+  font-style: bold;
+  color: #95dacf;
+}
+
+.resume {
+  font-size: 16px;
+  text-align: center;
+  max-width: 600px;
+  color: #F0F7F9;
+  margin-bottom: 25px;
+}
+
+.marked {
+  color: #ada0f7;
+}
+
+.social-icons {
+  margin-top: 50px;
+}
+
+.social-icons a {
+  color: #95dacf;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 25px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.social-icons a:hover {
+  color: #ada0f7;
+}
+
+.tooltip {
+  font-family: 'BigShouldersDisplay', sans-serif;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #595380;
+  color: #F0F7F9;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.social-icons a:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buttons {
+  font-family: 'BigShouldersDisplay', sans-serif;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid #4e6096;
+	display: inline-block;
+	cursor: pointer;
+	color: #95dacf;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 16px 30px;
+	text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.buttons:hover {
+	background-color: #4e6096;
+  color: #F0F7F9;
+}
