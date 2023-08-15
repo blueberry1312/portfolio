@@ -1,26 +1,20 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-scroll';
+import '../assets/style/navbar.css';
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul>
+    <nav className='navbar'>
+      <Link to="" className='nav-logo'>N</Link>
+      <ul className='nav-links'>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="about" className='nav-link'>About</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="projects" className='nav-link'>Projects</Link>
         </li>
         <li>
-          <Link to="/resume">Resume</Link>
-        </li>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>
-          <Link to="/portfolio">Portfolio</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="contact" className='nav-link'>Contact</Link>
         </li>
       </ul>
     </nav>

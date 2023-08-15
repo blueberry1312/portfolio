@@ -1,30 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
-import Resume from './components/Resume';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
-import './App.css';
+import './assets/style/index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <Router>
+    <div className="app">
         <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
+      <div className="section" id="home">
+        <Home />
+      </div>
+      <div className="section" id="about">
+        <About />
+      </div>
+      <div className="section" id="projects">
+        <Projects />
+      </div>
+      <div className="section" id="contact">
+        <Contact />
+      </div>
     </div>
   );
 }
