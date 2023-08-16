@@ -13,12 +13,15 @@ function App() {
       <div className="section" id="home">
         <Home />
       </div>
+      <div className="section-divider"></div>
       <div className="section" id="about">
         <About />
       </div>
+      <div className="section-divider"></div>
       <div className="section" id="projects">
         <Projects />
       </div>
+      <div className="section-divider"></div>
       <div className="section" id="contact">
         <Contact />
       </div>
