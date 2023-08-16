@@ -5,6 +5,42 @@
 }
 
 .skills {
-  margin-top: 15px;
+  margin-top: 50px;
   font-weight: 700;
+  margin-bottom: 50px;
+  color: rgb(241, 131, 131);
+}
+
+.skills-icon .tooltip-container i.fa-brands.fa-2xl,
+.skills-icon .tooltip-container img {
+  vertical-align: middle;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.tooltip-container .tooltip {
+  font-family: 'BigShouldersDisplay', sans-serif;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #595380;
+  color: #F0F7F9;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
