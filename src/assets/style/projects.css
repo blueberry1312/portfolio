@@ -134,9 +134,18 @@
 
 @media (max-width: 680px) {
   .project-card {
-    width: 300px;
+    width: 288px;
   }
   .project-screenshot {
-    width: 280px;
+    width: 275px;
+  }
+  .nextbtn {
+    position: relative;
+    left: 45px;
+  }
+  
+  .prevbtn {
+    position: relative;
+    right: 45px;
   }
 }
