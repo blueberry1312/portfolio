@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer'
+import ScrollToTopButton from './components/ScrollToTopButton';
 import './assets/style/index.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Contact />
       </div>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -13,23 +13,22 @@
   border-radius: 10px;
   border: 1px solid #a2b5ee;
   padding: 30px;
-  width: 700px;
-  height: 700px;
   margin: 0 auto;
+  width: 70%;
 }
 
 .project-card .title{
   font-size: 28px;
 }
 
-.project-screenshot {
-  height: 300px;
+.project-card .project-screenshot {
+  width: 100%;
   margin: 20px 0;
 }
 
 .project-description {
-  max-width: 750px;
   margin: 0 auto;
+  height: auto;
 }
 
 .project-buttons {
@@ -66,9 +65,9 @@
 
 .carousel-controls {
   display: flex;
-  justify-content: space-between;
-  top: -408px;
   position: relative;
+  top: 350px;
+  gap: 1500px;
 }
 
 .carousel-controls button {
@@ -86,66 +85,58 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.nextbtn {
-  position: relative;
-  left: 80px;
-}
-
-.prevbtn {
-  position: relative;
-  right: 80px;
-}
-
 .carousel-controls button:hover {
   background-color: #4e6096;
   color: #f0f7f9;
 }
 
-@media (max-width: 1023px) {
-  .project-card {
-    width: 600px
+@media (max-width: 1440px) {
+  .carousel-controls {
+    gap: 1000px;
   }
-  .project-screenshot {
-    width: 550px;
+}
+
+@media (max-width: 1140px) {
+  .carousel-controls {
+    gap: 800px;
   }
-  .nextbtn {
-    position: relative;
-    left: 70px;
-  }
-  
-  .prevbtn {
-    position: relative;
-    right: 70px;
+}
+
+@media (max-width: 940px) {
+  .carousel-controls {
+    gap: 650px;
   }
 }
 
 @media (max-width: 768px) {
-  .project-card {
-    width: 500px;
-    height: 675px;
+  .carousel-controls {
+    gap: 500px;
+    top: 250px;
   }
   .project-description {
     display: none;
   }
-  .project-screenshot {
-    width: 450px;
+  .project-buttons {
+    font-size: 14px;
+    padding: 5px 5px;
+    margin: 10px;
   }
 }
 
-@media (max-width: 680px) {
-  .project-card {
-    width: 288px;
+@media (max-width: 600px) {
+  .carousel-controls {
+    gap: 400px;
   }
-  .project-screenshot {
-    width: 275px;
+}
+
+@media (max-width: 500px) {
+  .carousel-controls {
+    gap: 300px;
   }
-  .nextbtn {
-    position: relative;
-    left: 45px;
-  }
-  
-  .prevbtn {
-    position: relative;
-    right: 45px;
+}
+
+@media (max-width: 400px) {
+  .carousel-controls {
+    gap: 225px;
   }
 }

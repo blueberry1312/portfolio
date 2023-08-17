@@ -26,7 +26,7 @@ const About = () => {
       needs, highlight their core competencies, and further success. I have developed real-world projects such as the
       page to organize the inventory of a bookstore, a web app for check to do list, a web application that provides
       countries data of all countries in the world, or a full stack app to reserve a glamping.</p>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vRMgtinWVNUcKkDDPtAKn2FsmGQTN4N731lHWDgB6sYWVz5akxPGtaBSoxQDUfJLg0n8qVjlJoy88sF/pub" target="_blank" rel="noopener noreferrer">
+      <a href="https://drive.google.com/file/d/1WTxYyfArMSWxEiEiEDGcSFBt1X3urU97/view?usp=sharing" target="_blank" rel="noopener noreferrer">
         <button className='buttons'>GET MY RESUME</button>
       </a>
       <p className='resume marked skills'>SOME OF MY EXPERTISES:</p>
