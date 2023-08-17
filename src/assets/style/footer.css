@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #95dacf;
+}
+
+.social-icons i {
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .footer {
+  display: flex;
+  flex-direction: column;
+  }
+  .footer p {
+    margin-bottom: 5px;
+  }
+}
