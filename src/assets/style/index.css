@@ -127,6 +127,7 @@ body {
 	padding: 16px 30px;
 	text-decoration: none;
   letter-spacing: 2px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .buttons:hover {
@@ -138,5 +139,5 @@ body {
   width: 10%;
   height: 1px;
   background-color: #738ddb;
-  margin: 0 auto 150px;
+  margin: 50px auto 100px;
 }

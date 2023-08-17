@@ -3,3 +3,97 @@
   flex-direction: column;
   align-items: center;
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #a2b5ee;
+  padding: 50px;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.project-screenshot {
+  width: 500px;
+  height: 300px;
+  margin: 20px 0;
+}
+
+.project-description {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.project-buttons {
+  font-family: 'BigShouldersDisplay', sans-serif;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid #4e6096;
+	display: inline-block;
+	cursor: pointer;
+	color: #95dacf;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 10px;
+  margin: 5px;
+	text-decoration: none;
+  letter-spacing: 2px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-buttons a {
+  margin: 5px;
+  color: #95dacf;
+  text-decoration: none;
+}
+
+.project-buttons:hover {
+	background-color: #4e6096;
+  color: #F0F7F9;
+}
+
+.frameworks-used {
+  margin-top: 20px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  top: -408px;
+  position: relative;
+}
+
+.carousel-controls button {
+  background-color: transparent;
+  border: 1px solid #a2b5ee;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #95dacf;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-controls button .nextbtn {
+  position: relative;
+  left: 80px;
+}
+
+.carousel-controls button .prevbtn {
+  position: relative;
+  right: 80px;
+}
+
+.carousel-controls button:hover {
+  background-color: #4e6096;
+  color: #f0f7f9;
+}
