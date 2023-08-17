@@ -36,3 +36,14 @@
 .nav-logo:hover {
   color: #ada0f7;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+}

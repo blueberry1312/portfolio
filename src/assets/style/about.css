@@ -11,6 +11,11 @@
   color: rgb(241, 131, 131);
 }
 
+.skills-icon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .skills-icon .tooltip-container i.fa-brands.fa-2xl,
 .skills-icon .tooltip-container img {
   vertical-align: middle;
@@ -44,3 +49,15 @@
   opacity: 1;
   visibility: visible;
 }
+
+@media (max-width: 1023px) {
+  .skills-icon {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-icon .tooltip-container {
+    margin: 10px 20px;
+  }
+}
+
