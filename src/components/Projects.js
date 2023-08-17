@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../assets/style/projects.css';
 import JestLogo from '../assets/images/jestlogo.svg';
 import TailwindCSSLogo from '../assets/images/tailwindcsslogo.svg';
@@ -8,30 +8,30 @@ import RailsLogo from '../assets/images/railslogo.svg';
 import ReduxLogo from '../assets/images/reduxlogo.svg';
 import CplusLogo from '../assets/images/cpluslogo.svg';
 
-const mapFrameworkToIcon = (framework) => {
+const mapFrameworkToIcon = (framework, iconSizeClass) => {
   const logoStyle = {
-    height: '2em',
+    height: iconSizeClass === 'fa-lg' ? '1em' : '2em',
     color: '#595380'
   };
   switch (framework) {
     case 'React':
       return <div className="tooltip-container">
-      <i class="fa-brands fa-react fa-2xl"></i>
+      <i class={`fa-brands fa-react ${iconSizeClass}`}></i>
       <span className="tooltip">React</span>
     </div>;
     case 'Javascript':
       return <div className="tooltip-container">
-      <i class="fa-brands fa-js fa-2xl"></i>
+      <i class={`fa-brands fa-js ${iconSizeClass}`}></i>
       <span className="tooltip">Javascript</span>
     </div>;
     case 'HTML5':
       return <div className="tooltip-container">
-      <i class="fa-brands fa-html5 fa-2xl"></i>
+      <i class={`fa-brands fa-html5 ${iconSizeClass}`}></i>
       <span className="tooltip">HTML5</span>
     </div>;
     case 'CSS3':
       return <div className="tooltip-container">
-      <i class="fa-brands fa-css3-alt fa-2xl"></i>
+      <i class={`fa-brands fa-css3-alt ${iconSizeClass}`}></i>
       <span className="tooltip">CSS3</span>
     </div>;
     case 'Jest':
@@ -119,6 +119,7 @@ const projectsData = [
 
 const Projects = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [iconSizeClass, setIconSizeClass] = useState('fa-2xl');
 
   const handlePrevProject = () => {
     setCurrentProjectIndex((prevIndex) =>
@@ -132,58 +133,82 @@ const Projects = () => {
 
   const currentProject = projectsData[currentProjectIndex];
 
+  const handleIconSize = () => {
+    if (window.innerWidth <= 600) {
+      setIconSizeClass('fa-lg');
+    } else {
+      setIconSizeClass('fa-2xl');
+    }
+  };
+
+  useEffect(() => {
+    handleIconSize();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleIconSize);
+
+    return () => {
+      window.removeEventListener('resize', handleIconSize);
+    };
+  }, []);
+
   return (
     <div className='projects-container' id='projects'>
       <h1 className='title subtitle'>PORTFOLIO</h1>
       <h1 className='title'>PROJECTS</h1>
       <p className='resume'>Take a look at my projects:</p>
-      <div className='carousel-controls'>
-          <button onClick={handlePrevProject} className='prevbtn'>&lt;</button>
-          <button onClick={handleNextProject} className='nextbtn'>&gt;</button>
-      </div>
-      <div className='project-carousel'>
-        <div className='project-card'>
-          <div className='title'>
-            <p>{currentProject.title}</p>
-          </div>
-          <img
-            src={currentProject.screenshot}
-            alt={currentProject.title}
-            className='project-screenshot'
-          />
-          <div className='project-description'>
-            <p>{currentProject.description}</p>
-          </div>
-          <div className='project-buttons1'>
-            <div className='project-buttons'>
-              <a
-                href={currentProject.githubLink}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                GitHub
-              </a>
+      <div className='carousel'>
+        <div className='prevbtn'>
+          <button onClick={handlePrevProject} >&lt;</button>
+        </div>
+        <div className='project-carousel'>
+          <div className='project-card'>
+            <div className='title'>
+              <p>{currentProject.title}</p>
             </div>
-            <div className='project-buttons'>
-              <a
-                href={currentProject.liveDemoLink}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Live Demo
-              </a>
+            <img
+              src={currentProject.screenshot}
+              alt={currentProject.title}
+              className='project-screenshot'
+            />
+            <div className='project-description'>
+              <p>{currentProject.description}</p>
+            </div>
+            <div className='project-buttons1'>
+              <div className='project-buttons'>
+                <a
+                  href={currentProject.githubLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  GitHub
+                </a>
+              </div>
+              <div className='project-buttons'>
+                <a
+                  href={currentProject.liveDemoLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div className='skills-icon'>
+              <p className='frameworks-used'>
+                {currentProject.frameworksUsed.map((framework, index) => (
+                  <React.Fragment key={framework}>
+                    {index !== 0 && ' '}
+                    {mapFrameworkToIcon(framework, iconSizeClass)}
+                  </React.Fragment>
+                ))}
+              </p>
             </div>
           </div>
-          <div className='skills-icon'>
-            <p className='frameworks-used'>
-              {currentProject.frameworksUsed.map((framework, index) => (
-                <React.Fragment key={framework}>
-                  {index !== 0 && ' '}
-                  {mapFrameworkToIcon(framework)}
-                </React.Fragment>
-              ))}
-            </p>
-          </div>
+        </div>
+        <div className='nextbtn'>
+          <button onClick={handleNextProject} >&gt;</button>
         </div>
       </div>
     </div>
