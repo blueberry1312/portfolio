@@ -64,7 +64,7 @@
 
 .carousel {
   display: flex;
-  width: 100%;
+  width: 90%;
 }
 
 .carousel button {
@@ -120,6 +120,12 @@
   .project-buttons {
     padding: 5px 5px;
     margin: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel {
+    width: 140%;
   }
 }
 
