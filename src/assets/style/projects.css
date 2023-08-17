@@ -138,3 +138,9 @@
     right: 30px;
   }
 }
+
+@media (max-width: 560px) {
+  .project-description {
+    display: none;
+  }
+}
