@@ -21,13 +21,14 @@
 }
 
 .project-card .project-screenshot {
-  width: 100%;
+  width: 85%;
   margin: 20px 0;
+  height: 90%;
 }
 
 .project-description {
   margin: 0 auto;
-  height: auto;
+  height: 120px;
 }
 
 .project-buttons {
@@ -64,7 +65,7 @@
 
 .carousel {
   display: flex;
-  width: 90%;
+  width: 80%;
 }
 
 .carousel button {
@@ -99,7 +100,7 @@
     display: none;
   }
   .carousel {
-    width: 115%;
+    width: 100%;
   }
   .skills-icon .tooltip-container {
     margin: 5px;
@@ -108,11 +109,14 @@
     padding: 5px 5px;
     margin: 5px;
   }
+  .nextbtn, .prevbtn {
+    margin: 10px;
+  }
 }
 
 @media (max-width: 500px) {
   .carousel {
-    width: 130%;
+    width: 120%;
   }
   .skills-icon .tooltip-container {
     margin: 5px;
@@ -125,7 +129,7 @@
 
 @media (max-width: 400px) {
   .carousel {
-    width: 140%;
+    width: 130%;
   }
 }
 
