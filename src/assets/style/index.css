@@ -24,13 +24,9 @@ body {
   color: #86D5F7;
 }
 
-.app {
-  overflow-x: hidden;
-}
-
 .section {
   height: auto;
-  padding: 50px;
+  padding: 100px 50px 0 50px;
   scroll-snap-align: start;
 }
 
@@ -39,7 +35,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
 }
 
 .title {
@@ -65,7 +60,6 @@ body {
 .resume {
   font-size: 16px;
   text-align: center;
-  max-width: 600px;
   color: #F0F7F9;
   margin-bottom: 25px;
 }
@@ -76,6 +70,8 @@ body {
 
 .social-icons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-icons a {
@@ -140,15 +136,4 @@ body {
   height: 1px;
   background-color: #738ddb;
   margin: 50px auto 100px;
-}
-
-@media (max-width: 768px) {
-  .home-container {
-    margin-top: 60px;
-  }
-
-  .social-icons {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }

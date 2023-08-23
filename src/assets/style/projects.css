@@ -14,21 +14,14 @@
   border: 1px solid #a2b5ee;
   padding: 30px;
   margin: 0 auto;
+  width: 70vw;
+  height: 80vh;
+  overflow-y: auto;
 }
 
 .project-card .title{
-  font-size: 28px;
-}
-
-.project-card .project-screenshot {
-  width: 85%;
-  margin: 20px 0;
-  height: 90%;
-}
-
-.project-description {
-  margin: 0 auto;
-  height: 120px;
+  margin-bottom: 0;
+  font-size: 40px;
 }
 
 .project-buttons {
@@ -65,7 +58,11 @@
 
 .carousel {
   display: flex;
-  width: 80%;
+}
+
+.project-screenshot {
+  width: 60vw;
+  padding: 25px;
 }
 
 .carousel button {
@@ -99,38 +96,25 @@
   .project-description {
     display: none;
   }
-  .carousel {
-    width: 100%;
+}
+
+@media (max-width: 425px) {
+  .project-card .title {
+    font-size: 28px;
   }
-  .skills-icon .tooltip-container {
-    margin: 5px;
+  .project-screenshot {
+    width: 65vw;
+    padding: 0;
+  }
+  .skills-icon {
+    padding: 0;
+  }
+  .project-buttons1 {
+    display: flex;
   }
   .project-buttons {
-    padding: 5px 5px;
-    margin: 5px;
-  }
-  .nextbtn, .prevbtn {
+    padding: 10px 5px;
     margin: 10px;
   }
 }
-
-@media (max-width: 500px) {
-  .carousel {
-    width: 120%;
-  }
-  .skills-icon .tooltip-container {
-    margin: 5px;
-  }
-  .project-buttons {
-    padding: 5px 5px;
-    margin: 5px;
-  }
-}
-
-@media (max-width: 400px) {
-  .carousel {
-    width: 130%;
-  }
-}
-
 

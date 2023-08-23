@@ -14,6 +14,8 @@
 .skills-icon {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 50px 0 50px;
 }
 
 .skills-icon .tooltip-container i.fa-brands.fa-2xl,
@@ -50,14 +52,4 @@
   visibility: visible;
 }
 
-@media (max-width: 1023px) {
-  .skills-icon {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .skills-icon .tooltip-container {
-    margin: 10px 20px;
-  }
-}
 
