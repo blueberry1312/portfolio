@@ -33,7 +33,7 @@ const ScrollToTopButton = () => {
         onClick={scrollToTop}
       >
         <i className="fas fa-chevron-up"></i>
-        <span className="scroll">Scroll to Top</span>
+        <span className="scroll">Go Top</span>
       </div>
     </div>
   );
