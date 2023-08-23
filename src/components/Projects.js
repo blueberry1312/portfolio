@@ -177,7 +177,7 @@ const Projects = () => {
                 <button onClick={handleNextProject} >&gt;</button>
               </div>
             </div>
-            <div className='project-description'>
+            <div className='project-description resume'>
               <p>{currentProject.description}</p>
             </div>
             <div className='project-buttons1'>
