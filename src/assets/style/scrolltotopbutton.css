@@ -1,7 +1,7 @@
 .scroll-to-top-button {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
+  bottom: 150px;
+  right: 50px;
   background-color: transparent;
   color: #95dacf;
   width: 40px;
@@ -24,4 +24,29 @@
 .scroll-to-top-button:hover {
   background-color: #4e6096;
   color: #f0f7f9;
+}
+
+.tooltip-container-scroll .scroll {
+  font-family: 'BigShouldersDisplay', sans-serif;
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: #F0F7F9;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  border: 1px solid #99b0f7;
+  text-align: center;
+}
+
+.scroll-to-top-button:hover .scroll{
+  opacity: 1;
+  visibility: visible;
 }

@@ -6,7 +6,7 @@ const Home = () => {
       <h1 className='title subtitle'>HEY THERE!</h1>
       <h1 className='title'>I AM NES</h1>
       <p className='resume'>I am a passionate <span className='marked'>full stack developer</span> with a love for technological innovation. Explore my portfolio and experience, and feel free to reach out if you need assistance in building your desired web app!</p>
-      <div className="social-icons">
+      <div className="social-icons social-home">
         <a href="https://github.com/blueberry1312/">
           <i class="fa-brands fa-github fa-2xl"></i>
           <span className="tooltip">GITHUB</span>

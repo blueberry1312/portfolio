@@ -27,11 +27,14 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <div
-      className={`scroll-to-top-button ${isVisible ? 'visible' : ''}`}
-      onClick={scrollToTop}
-    >
-      <i className="fas fa-chevron-up"></i>
+    <div className="tooltip-container-scroll">
+      <div
+        className={`scroll-to-top-button ${isVisible ? 'visible' : ''}`}
+        onClick={scrollToTop}
+      >
+        <i className="fas fa-chevron-up"></i>
+        <span className="scroll">Scroll to Top</span>
+      </div>
     </div>
   );
 };

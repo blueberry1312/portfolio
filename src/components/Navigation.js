@@ -5,7 +5,7 @@ import '../assets/style/navbar.css';
 const Navigation = () => {
   return (
     <nav className='navbar'>
-      <Link to="" className='nav-logo'>N</Link>
+      <Link to="home" className='nav-logo'>N</Link>
       <ul className='nav-links'>
         <li>
           <Link to="about" className='nav-link'>About</Link>

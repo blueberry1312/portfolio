@@ -26,7 +26,7 @@ body {
 
 .section {
   height: auto;
-  padding: 100px 15px 0 15px;
+  padding: 125px 15px 0 15px;
   scroll-snap-align: start;
 }
 
@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 75vh;
 }
 
 .title {
@@ -88,13 +89,17 @@ body {
   color: #ada0f7;
 }
 
+.social-home {
+  margin-top: 25px;
+}
+
 .tooltip {
   font-family: 'BigShouldersDisplay', sans-serif;
   position: absolute;
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #595380;
+  background-color: transparent;
   color: #F0F7F9;
   padding: 5px 10px;
   border-radius: 4px;
@@ -104,6 +109,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
+  border: 1px solid #99b0f7;
 }
 
 .social-icons a:hover .tooltip {
@@ -137,4 +143,12 @@ body {
   height: 1px;
   background-color: #738ddb;
   margin: 50px auto 100px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: auto;
+    padding: 95px 15px 0 15px;
+    scroll-snap-align: start;
+  }  
 }
