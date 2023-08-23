@@ -11,12 +11,10 @@
   text-align: center;
   background-color: transparent;
   border-radius: 10px;
-  border: 1px solid #a2b5ee;
   padding: 30px;
   margin: 0 auto;
-  width: 70vw;
-  height: 80vh;
-  overflow-y: auto;
+  height: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -86,26 +84,18 @@
   color: #f0f7f9;
 }
 
-.nextbtn,
-.prevbtn {
+.carou {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
-}
-
-@media (max-width: 768px) {
-  .project-description {
-    display: none;
-  }
 }
 
 @media (max-width: 425px) {
+  .project-description {
+    display: none;
+  }
   .project-card .title {
     font-size: 28px;
-  }
-  .project-screenshot {
-    width: 65vw;
-    padding: 0;
   }
   .skills-icon {
     padding: 0;
@@ -116,9 +106,6 @@
   .project-buttons {
     padding: 10px 5px;
     margin: 10px;
-  }
-  .project-card {
-    height: 500px;
   }
 }
 

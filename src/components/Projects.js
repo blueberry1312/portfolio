@@ -159,19 +159,24 @@ const Projects = () => {
       <h1 className='title'>PROJECTS</h1>
       <p className='resume'>Take a look at my projects:</p>
       <div className='carousel'>
-        <div className='prevbtn'>
-          <button onClick={handlePrevProject} >&lt;</button>
-        </div>
         <div className='project-carousel'>
           <div className='project-card'>
             <div className='title'>
               <p>{currentProject.title}</p>
             </div>
-            <img
-              src={currentProject.screenshot}
-              alt={currentProject.title}
-              className='project-screenshot'
-            />
+            <div className='carou'>
+              <div className='prevbtn'>
+                <button onClick={handlePrevProject} >&lt;</button>
+              </div>
+              <img
+                src={currentProject.screenshot}
+                alt={currentProject.title}
+                className='project-screenshot'
+              />
+              <div className='nextbtn'>
+                <button onClick={handleNextProject} >&gt;</button>
+              </div>
+            </div>
             <div className='project-description'>
               <p>{currentProject.description}</p>
             </div>
@@ -206,9 +211,6 @@ const Projects = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className='nextbtn'>
-          <button onClick={handleNextProject} >&gt;</button>
         </div>
       </div>
     </div>
