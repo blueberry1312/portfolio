@@ -6,9 +6,9 @@
 }
 
 @font-face {
-  font-family: 'Cinzel';
+  font-family: 'RobotoSlab';
   font-style: normal;
-  src: url('../fonts/Cinzel-VariableFont_wght.ttf') format('truetype');
+  src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
@@ -20,7 +20,7 @@
 body {
   background: url("../images/background.png");
   background-color: #3a5c6b;
-  font-family: 'Cinzel', sans-serif;
+  font-family: 'RobotoSlab', sans-serif;
   color: #86D5F7;
 }
 
